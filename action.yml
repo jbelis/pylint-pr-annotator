@@ -1,5 +1,8 @@
 name: "{tool-name} PR Annotator"
 description: "Annotate pull requests with pylint errors detected during CI"
+branding:
+  icon: "check-circle"
+  color: "blue"
 author: "Joe Young"
 runs:
   using: "composite"
