@@ -1,10 +1,15 @@
-# {tool-name} PR Annotator
+# pylint PR Annotator
+
+## Credits
+
+This is a fork of [pylint-error-matcher](https://github.com/jpy-git/template-pr-annotator)
 
 ## Usage
 
-Annotate pull requests with {tool-name} errors detected during CI.
+Annotate pull requests with pylint errors detected during CI.
 
-Note: This doesn't install or run {tool-name}, it just sets up the PR annotations.
+Note: This doesn't install or run pylint, it just sets up the PR annotations.
+
 
 ### Example workflow
 
@@ -22,14 +27,14 @@ jobs:
         with:
           python-version: "3.8"
         
-      - name: Install {tool-name}
+      - name: Install pylint
         run: |
-          pip install {tool-name}
+          pip install pylint
 
-      - name: Add {tool-name} annotator
-        uses: jpy-git/{tool-name}-pr-annotator@master
+      - name: Add pylint annotator
+        uses: jpy-git/pylint-pr-annotator@master
 
-      - name: Run {tool-name}
+      - name: Run pylint
         run: |
-          {tool-name} src/
+          pylint src/
 ```

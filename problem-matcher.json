@@ -1,7 +1,7 @@
 {
     "problemMatcher": [
         {
-            "owner": "{tool-name}-error",
+            "owner": "pylint-error",
             "severity": "error",
             "pattern": [
                 {
